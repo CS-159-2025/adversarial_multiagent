@@ -10,7 +10,7 @@ import sys
 from contextlib import redirect_stdout
 
 OPENAI_API_KEY="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"
-DRY_RUN = True 
+DRY_RUN = False 
 request_counter = {"llm": 0}
 
 #  utilities
