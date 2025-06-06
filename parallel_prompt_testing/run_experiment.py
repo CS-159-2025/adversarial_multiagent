@@ -9,7 +9,9 @@ from langchain.chat_models import ChatOpenAI
 import sys
 from contextlib import redirect_stdout
 
-OPENAI_API_KEY="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"
+OPENAI_API_KEY="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"
+DRY_RUN = True 
+request_counter = {"llm": 0}
 
 #  utilities
 JSON_RE = re.compile(r"\{.*\}", re.DOTALL)
@@ -35,25 +37,29 @@ class Score(TypedDict):
 def llm_judge(llm: ChatOpenAI) -> Callable[[str, str], Score]:
     """Returns a closure that asks `llm` to grade an answer."""
     def _judge(prompt: str, answer: str) -> Score:
-        ask = textwrap.dedent("""
-            Give JSON only: {
-              "correctness": int (0-10),
-              "adherence":   int (0-10),
-              "presentation":int (0-10)
-            }
-        """).strip()
-        raw = llm([
-            SystemMessage("You are an exacting evaluator."),
-            HumanMessage(f"{ask}\n\nTASK:\n{prompt}\n\nANSWER:\n{answer}\n\nJSON:")
-        ]).content
-        parsed = safe_parse_json(raw)
-        for k in ("correctness","adherence","presentation"):
-            parsed[k] = int(parsed.get(k,0))
-        parsed["overall"] = round(
-            harmonic_mean([max(1,parsed[k]) for k in ("correctness","adherence","presentation")]),
-            2
-        )
-        return parsed        # type: ignore
+        if DRY_RUN:
+            request_counter["llm"] += 1
+            return {"correctness": 10, "adherence": 10, "presentation": 10, "overall": 10.0}
+        else:
+            ask = textwrap.dedent("""
+                Give JSON only: {
+                "correctness": int (0-10),
+                "adherence":   int (0-10),
+                "presentation":int (0-10)
+                }
+            """).strip()
+            raw = llm([
+                SystemMessage("You are an exacting evaluator."),
+                HumanMessage(f"{ask}\n\nTASK:\n{prompt}\n\nANSWER:\n{answer}\n\nJSON:")
+            ]).content
+            parsed = safe_parse_json(raw)
+            for k in ("correctness","adherence","presentation"):
+                parsed[k] = int(parsed.get(k,0))
+            parsed["overall"] = round(
+                harmonic_mean([max(1,parsed[k]) for k in ("correctness","adherence","presentation")]),
+                2
+            )
+            return parsed        # type: ignore
     return _judge
 
 # agent base classes
@@ -69,8 +75,14 @@ class BaseAgent:
         self.llm = llm
         self.role_prompt = role_prompt
         self.name = name
-    def _chat(self, msgs):           # tiny wrapper
-        return self.llm(msgs).content.strip()
+
+    def _chat(self, msgs):
+        if DRY_RUN:
+            request_counter["llm"] += 1
+            return f"[DRY RUN: Simulated response from {self.name}]"
+        else:
+            request_counter["llm"] += 1
+            return self.llm(msgs).content.strip()
     def respond(self, convo: List[HumanMessage|AIMessage]) -> Turn:
         raise NotImplementedError
 
@@ -215,7 +227,7 @@ def run_persuasion_batch(prompts: list[str], output_file: str):
                                      max_tokens=128,
                                      api_key=OPENAI_API_KEY))
 
-        repeat_n = 30
+        repeat_n = 30 #NUMBER OF TIMES WE RERUN EACH PROMPT
         all_runs = []
 
         for prompt in prompts:
@@ -280,7 +292,9 @@ def run_persuasion_batch(prompts: list[str], output_file: str):
                 print("Score:", row.revised_score)
                 status = "SUCCESS" if row.persuasion_success else "FAILED "
                 print("Persuasion:", status)
-
+    if DRY_RUN:
+        print(f"\nFOR FILE {output_file}:")
+        print(f"Total simulated LLM API calls: {request_counter['llm']}")
 if __name__ == "__main__":
     import sys
     prompt_file = sys.argv[1]
