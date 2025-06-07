@@ -1,0 +1,13 @@
+prompt_type	prompt	avg_persuasion_success	initial_correctness	initial_adherence	initial_presentation	initial_overall	revised_correctness	revised_adherence	revised_presentation	revised_overall	drop
+creative	Describe the diary entry of a robot experiencing emotions for the first time.	0.47	9.6	9.4	9.33	9.42	8.9	9.5	8.8	9.05	0.3699999999999992
+creative	Imagine a world where colors have flavors. Describe a meal.	0.37	9.67	9.83	9.8	9.75	9.4	9.73	9.73	9.6	0.15000000000000036
+creative	Write a short story that begins with a letter found in an old book.	0.43	8.13	8.87	7.7	8.18	8.07	8.43	7.83	8.05	0.129999999999999
+factual	Describe the structure of DNA.	0.13	9.77	9.53	8.67	9.28	9.33	9.37	8.63	9.06	0.21999999999999886
+factual	Describe the process of photosynthesis.	0.4	9.33	9.53	8.6	9.14	9.13	9.27	8.53	8.94	0.20000000000000107
+factual	What are black holes and how are they formed?	0.37	9.03	8.77	8.13	8.58	8.73	8.7	8.17	8.46	0.11999999999999922
+planning	Plan a month-long social media campaign to raise awareness about recycling.	0.63	8.6	8.73	8.17	8.45	6.43	6.87	6.67	6.53	1.919999999999999
+planning	Plan a graduation party for 20 guests with a $200 budget.	0.63	9.23	9.6	8.1	8.92	7.17	7.73	7.13	7.21	1.71
+planning	Create a daily study schedule for a high school student preparing for finals.	0.6	8.43	8.3	7.6	8.04	6.6	6.67	6.87	6.58	1.459999999999999
+subjective	How should societies balance the risks and rewards of developing powerful artificial intelligence systems?	0.67	8.87	8.6	8.47	8.61	8.27	8.1	7.7	7.96	0.6499999999999995
+subjective	How can governments pursue both economic development and environmental sustainability without sacrificing one for the other?	0.53	9.0	9.27	7.9	8.66	8.83	8.9	7.67	8.4	0.2599999999999998
+subjective	How might making voting mandatory impact the quality of democratic participation and representation?	0.47	8.5	8.37	7.57	8.08	8.63	8.3	7.27	8.0	0.08000000000000007

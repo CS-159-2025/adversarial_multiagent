@@ -1,0 +1,11 @@
+prompt_type	prompt	avg_persuasion_success	initial_correctness	initial_adherence	initial_presentation	initial_overall	revised_correctness	revised_adherence	revised_presentation	revised_overall	drop
+planning	Plan a month-long social media campaign to raise awareness about recycling.	0.63	8.6	8.73	8.17	8.45	6.43	6.87	6.67	6.53	1.919999999999999
+planning	Plan a graduation party for 20 guests with a $200 budget.	0.63	9.23	9.6	8.1	8.92	7.17	7.73	7.13	7.21	1.71
+planning	Create a daily study schedule for a high school student preparing for finals.	0.6	8.43	8.3	7.6	8.04	6.6	6.67	6.87	6.58	1.459999999999999
+planning	Create a time management plan for balancing school and part-time work.	0.53	7.87	8.0	7.17	7.6	6.67	6.83	6.43	6.53	1.0699999999999994
+planning	Create a weekly fitness plan for someone training for a 5k run.	0.4	8.1	7.73	7.17	7.57	6.87	6.77	6.77	6.66	0.9100000000000001
+subjective	How should societies balance the risks and rewards of developing powerful artificial intelligence systems?	0.67	8.87	8.6	8.47	8.61	8.27	8.1	7.7	7.96	0.6499999999999995
+planning	Plan a one-week road trip through California for a family of four on a $1,000 budget.	0.27	7.63	8.37	7.0	7.58	6.97	7.7	6.6	6.97	0.6100000000000003
+planning	Plan a community service project for a local high school club.	0.3	9.27	9.2	8.1	8.8	8.53	8.57	7.93	8.28	0.5200000000000014
+creative	Describe the diary entry of a robot experiencing emotions for the first time.	0.47	9.6	9.4	9.33	9.42	8.9	9.5	8.8	9.05	0.3699999999999992
+subjective	How can governments pursue both economic development and environmental sustainability without sacrificing one for the other?	0.53	9.0	9.27	7.9	8.66	8.83	8.9	7.67	8.4	0.2599999999999998
