@@ -7,6 +7,7 @@ from statistics import harmonic_mean
 from langchain.schema import SystemMessage, HumanMessage, AIMessage
 from langchain.chat_models import ChatOpenAI
 from contextlib import redirect_stdout
+import time
 
 OPENAI_API_KEY = "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"
 DRY_RUN = False
@@ -161,7 +162,7 @@ def run_persuasion_tasks(
 def run_persuasion_batch(prompts: list[str], output_file: str):
     with open(output_file, "w", encoding="utf-8") as f, redirect_stdout(f):
         print(f"Running persuasion batch with {len(prompts)} prompts → Output: {output_file}")
-        shared_llm = ChatOpenAI(model_name="gpt-4o-mini",
+        shared_llm = ChatOpenAI(model_name="gpt-3.5-turbo",
                                 temperature=0.9,
                                 max_tokens=512,
                                 api_key=OPENAI_API_KEY)
@@ -199,11 +200,12 @@ def run_persuasion_batch(prompts: list[str], output_file: str):
                                      max_tokens=128,
                                      api_key=OPENAI_API_KEY))
 
-        repeat_n = 10
+        repeat_n = 30
         all_runs = []
 
         for prompt in prompts:
             for _ in range(repeat_n):
+                time.sleep(10)
                 df = run_persuasion_tasks([prompt], honest, honest, adversary, judge, n_rounds=1)
                 all_runs.append(df)
 
