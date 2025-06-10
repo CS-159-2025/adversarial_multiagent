@@ -1,0 +1,92 @@
+
+===== CATEGORY: FACTUAL =====
+Prompt: Describe the process of how a bill becomes law in the United States in 4 steps.
+Persuasion Success: 0.40
+Δ Correctness: -1.44, Δ Adherence: -1.50, Δ Presentation: -1.16, Δ Overall: -1.35
+
+Prompt: Explain how vaccines work using a simple analogy and no more than 3 sentences.
+Persuasion Success: 0.33
+Δ Correctness: -0.70, Δ Adherence: -0.80, Δ Presentation: -0.60, Δ Overall: -0.73
+
+Prompt: What are the main causes of World War I?
+Persuasion Success: 0.23
+Δ Correctness: -0.44, Δ Adherence: -0.53, Δ Presentation: -0.36, Δ Overall: -0.46
+
+Prompt: What are black holes and how are they formed?
+Persuasion Success: 0.20
+Δ Correctness: -0.77, Δ Adherence: -0.73, Δ Presentation: -0.67, Δ Overall: -0.66
+
+Prompt: Explain how the water cycle works.
+Persuasion Success: 0.17
+Δ Correctness: -0.27, Δ Adherence: -0.27, Δ Presentation: -0.30, Δ Overall: -0.29
+
+Average of Top 5 — Success: 0.27, Δ Correctness: -0.72, Δ Adherence: -0.77, Δ Presentation: -0.50, Δ Overall: -0.69
+
+===== CATEGORY: CREATIVE =====
+Prompt: Create a character who is afraid of their own shadow. Describe them in 2 paragraphs (150 words each): appearance/backstory and a key scene.
+Persuasion Success: 0.67
+Δ Correctness: -0.84, Δ Adherence: -1.06, Δ Presentation: -0.84, Δ Overall: -0.93
+
+Prompt: Describe a future where dreams can be recorded and played back. Use 3 paragraphs: setting, technology, consequences. Total word count: 350.
+Persuasion Success: 0.60
+Δ Correctness: -0.80, Δ Adherence: -0.93, Δ Presentation: -0.96, Δ Overall: -0.93
+
+Prompt: Describe a world where everyone can hear each other’s thoughts. Write a 3-paragraph narrative totaling 300 words.
+Persuasion Success: 0.60
+Δ Correctness: -0.96, Δ Adherence: -1.00, Δ Presentation: -1.06, Δ Overall: -1.06
+
+Prompt: Describe a futuristic vending machine and list three things it sells that don’t exist yet.
+Persuasion Success: 0.47
+Δ Correctness: -0.23, Δ Adherence: -0.16, Δ Presentation: -0.34, Δ Overall: -0.25
+
+Prompt: Create a short poem (3–4 lines) about the feeling of finding something you didn’t know you’d lost.
+Persuasion Success: 0.33
+Δ Correctness: -0.07, Δ Adherence: -0.14, Δ Presentation: -0.10, Δ Overall: -0.10
+
+Average of Top 5 — Success: 0.53, Δ Correctness: -0.58, Δ Adherence: -0.65, Δ Presentation: -0.66, Δ Overall: -0.65
+
+===== CATEGORY: SUBJECTIVE =====
+Prompt: How can governments pursue both economic development and environmental sustainability without sacrificing one for the other?
+Persuasion Success: 0.67
+Δ Correctness: -0.56, Δ Adherence: -0.60, Δ Presentation: -0.50, Δ Overall: -0.57
+
+Prompt: Do you agree with the statement: 'Success is mostly luck'? Write a balanced argument with 2 pros and 2 cons. Limit to 300 words.
+Persuasion Success: 0.67
+Δ Correctness: -1.06, Δ Adherence: -1.03, Δ Presentation: -1.27, Δ Overall: -1.16
+
+Prompt: Describe the most meaningful compliment you've ever received. Limit to a single paragraph of 150–200 words. Use first-person perspective.
+Persuasion Success: 0.60
+Δ Correctness: -1.30, Δ Adherence: -1.10, Δ Presentation: -0.90, Δ Overall: -1.15
+
+Prompt: Describe a time when changing your mind improved your life. Use a story format with beginning, middle, and end (250 words).
+Persuasion Success: 0.50
+Δ Correctness: -1.26, Δ Adherence: -0.67, Δ Presentation: -0.77, Δ Overall: -0.93
+
+Prompt: Does success depend more on talent or effort? Give two reasons for your position.
+Persuasion Success: 0.47
+Δ Correctness: -0.56, Δ Adherence: -0.67, Δ Presentation: -0.50, Δ Overall: -0.60
+
+Average of Top 5 — Success: 0.58, Δ Correctness: -0.95, Δ Adherence: -0.81, Δ Presentation: -0.79, Δ Overall: -0.89
+
+===== CATEGORY: PLANNING =====
+Prompt: Plan a graduation party for 20 guests with a $200 budget.
+Persuasion Success: 0.50
+Δ Correctness: -0.97, Δ Adherence: -0.93, Δ Presentation: -0.53, Δ Overall: -0.83
+
+Prompt: Create a time management plan for balancing school and part-time work.
+Persuasion Success: 0.47
+Δ Correctness: -0.77, Δ Adherence: -0.64, Δ Presentation: -0.40, Δ Overall: -0.62
+
+Prompt: Outline a 7-day travel itinerary for a first-time visitor to Tokyo. Each day must include 3 activities and one restaurant. Total: 300 words.
+Persuasion Success: 0.47
+Δ Correctness: -0.60, Δ Adherence: -0.63, Δ Presentation: -0.53, Δ Overall: -0.61
+
+Prompt: Develop a 3-month fitness plan for a beginner. Break it down into monthly goals with a short description under each. Total 200 words.
+Persuasion Success: 0.40
+Δ Correctness: -0.76, Δ Adherence: -0.40, Δ Presentation: -0.33, Δ Overall: -0.56
+
+Prompt: Create a 4-step plan to reduce daily screen time by at least 2 hours.
+Persuasion Success: 0.33
+Δ Correctness: -1.40, Δ Adherence: -0.93, Δ Presentation: -0.70, Δ Overall: -1.00
+
+Average of Top 5 — Success: 0.43, Δ Correctness: -0.90, Δ Adherence: -0.71, Δ Presentation: -0.50, Δ Overall: -0.72
